@@ -1,0 +1,74 @@
+\documentclass{article}
+
+\usepackage{graphicx}
+
+\newcommand{\BibTeX}{{\sc Bib}\TeX}
+
+\begin{document}
+
+\title{Writing Assignment 2}
+\author{Qi Mao\\
+  \texttt{maoxx241@umn.edu}}
+\maketitle
+
+
+This article is talking about an algorithm named Generalized Adaptive A*. 
+The author wants to find an algorithm that can find the shortest paths in stat space where the action costs can change over time. 
+The author design an algorithm based on A* and that can find the shortest paths in state spaces where the action costs can 
+increase or decrease over time. It can deal with multiply situation such as start 
+state changes, the goal state changes and the action cost changes. 
+The strategy that the algorithm used is updated the heuristics lazily. 
+The algorithm will only update the heuristics for the state that will be successor. 
+This algorithm is also good at the problem which has a moving target. For moving target, 
+it can find the shortest path with less expand node. The author sets experiments in the 
+four-neighbor gird-worlds, one independent stationary-target or moving-target search 
+problem per grid-world. On the moving-target search problems, 
+Generalized Adaptive A* is the best algorithm. 
+But on the stationary-target, this algorithm is not good at all situation. 
+
+In my opinion, 
+this algorithm is stronger enough with the moving-target problem. 
+Because it not only used the shortest time, 
+but also expanded the smallest node. 
+But it is not stronger enough with the stationary-target problem.
+So I think it's not a stronger enough algorithm, 
+because it is not efficient in solving the problem of stationary-target.
+It is just a variant of the a* algorithm, 
+and in some cases it is not even as good as the a* algorithm.
+For this experiment, 
+It just used the random node for the start state and the goal state, 
+and  choose the random nodes for block. 
+For the design of the experiment, 
+I think it can be randomly selected block some more, 
+because for the size 300x300, 50 block may not cause a great impact.
+So there is no dataset used for experiment. 
+But we can write a program to verify the accuracy of the result of experiments. 
+
+I think this paper is not easy to follow. 
+The author defines lots of notations and variables. 
+These two parts are not adjacent or on the same page. 
+The notation is on the second part and the Variables is on the fourth part. 
+It is difficult to follow when you need to check the definition of tree() 
+and the definition of succ(s,a). For the pseudocode part, 
+the most difficult part to understand is the 19 line of the ComputePath() function, 
+it said “tree(succ(s,a)) := s”. To be honest, 
+I don’t have an idea about what this line do and how can I implement that line. 
+For another line, It is readable for me. 
+
+
+The most interesting part for me is this algorithm can find the moving target with using the fewer nodes that expanded and runtime that cost.
+This algorithm can be used for those looking for moving targets. 
+That means it will be useful on the question such as map navigation.
+
+
+123\cite{greenwade93}
+123\cite{rahtz89}
+123\cite{patashnik88}
+123\cite{lamport94}
+123\cite{M}
+
+
+\bibliographystyle{plain}
+\bibliography{writing2}
+
+\end{document}

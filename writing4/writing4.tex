@@ -1,0 +1,41 @@
+\documentclass{article}
+\usepackage[english]{babel}
+\setlength{\parindent}{24pt}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage{setspace}
+\doublespacing
+\newcommand{\BibTeX}{{\sc Bib}\TeX}
+
+\begin{document}
+
+\title{Writing Assignment 4}
+\author{Qi Mao\\
+  \texttt{maoxx241@umn.edu}
+  \and
+  Haowen Luo\\
+  \texttt{luoxx560@umn.edu}
+  }
+\maketitle
+\section{Introduction}
+Crime is always an important social security problem for every country. However, it can be studied and analyzed by using many different methods as Patricia L. Brantingham claimed.\cite{brantingham1998mapping} Then we build a model with some algorithm to review the record of crime in a region and analysis it. What specific problem we should focus on is the next problem. “Crime cannot be predicted since it is neither systematic nor random.”, said by Shiju Sathyadevan.\cite{sathyadevan2014crime} However, Mr. Sathyadevan thinks crime prevention is a systematic method for identifying what kinds of crime happening. That is support for our crime prediction project. We think crime prediction would be very useful for social security department to prevent crime or protect the safety of officers. For this project, we would like to use Random Forest, Logistic Regression, Naive Bayes and decision tree. We will discuss them in detail in the description part. “USING MACHINE LEARNING ALGORITHMS TO ANALYZE CRIME DATA” is a good example project which analyzes the data of the FBI's Uniform Crime Reporting (UCR) program.\cite{mcclendon2015using} We think it would be an example for inspiring us to finish our project by step and step.
+
+\section{Description}
+Logistic Regression was used to classify individuals in the target categories based on the logistic function and it forces estimated probabilities to lie within the range 0-1, which is more sensible than linear regression.\cite{liu2011comparison}
+In Liu's paper, he builds three models for predicting violent re-offending. They provided the accuracy and AUC range of the three models. And they provided that the NNs was slightly better Than that Logistic Regression model, it did not demonstrate a significant improvement.
+
+Random Forest can have profound effects on prediction quality as well as the to be introduced variable importance measures.\cite{chen2016events}. In Chen's paper, he used the random forest to find the most important features. And they provided that the random forest can find several expected related features. We can use that to find something interesting.
+
+Naive Bayes has the ability to predict the probability that a given tuple belongs to a particular class.\cite{iqbal2013experimental} They also mentioned that if talking about solving complex classification problems, then naive bayes is not a recommended choice. In our project, we will clean up the data and make the question simple. So we can use Naive Bayes that can short training time and fast evaluation.
+
+"we classify crime data using decision tree into two classes, such as danger and neutral.", said by Nasridinov. \cite{nasridinov2013decision} They provided that decision tree can analyze are good enough to motivate us to use a decision tree in order to predict future crimes. So we can also try to simplify our question that we only consider the question only have two classes.
+
+"An ROC curce is useful for comparing the relative performance among different classifiers."\cite{Tan:2018:IDM:3208440} And precision and recall are also widely used metrics employed. In our project, we will use them to compare which classifier has the best performance.
+\section{Conclusion}
+
+In our project, we discuss the precision, recall and ROC curve of four different algorithms we discussed above, then comparing the performance with each algorithm. We will find the relationship between the location of the crime and the type of crime.
+
+
+\bibliographystyle{plain}
+\bibliography{writing4}
+\end{document}

@@ -1,0 +1,208 @@
+\documentclass{article}
+
+\usepackage{graphicx}
+
+\begin{document}
+
+\title{Homework3}
+\author{Qi Mao\\
+  \texttt{maoxx241@umn.edu}}
+\maketitle
+\section{Question1:}
+[30 points] Decide if the following sentences are valid, unsatisfiable, or neither. To do it, use the truth tables and equivalency rules from Chapter 7.\break
+\begin{itemize}
+    \item 1.	Small $\Rightarrow$  Small
+    \begin{center}
+        \begin{tabular}{ |l|l|}
+          \hline
+          P = Small & P $\Rightarrow$ P   \\ \hline
+          T & T  \\ \hline
+          F & T\\
+          \hline
+        \end{tabular}
+        \end{center}
+        Valid. Because P$\Rightarrow$P always true
+
+    \item Small $\Rightarrow$ Light
+    \begin{center}
+        \begin{tabular}{ |l|l|l|}
+          \hline
+          P = Small & Q = Light &P $\Rightarrow$ Q   \\ \hline
+          T & T &T\\ \hline
+          T & F &F\\ \hline
+          F & T &T\\ \hline
+          F & F &T\\
+          \hline
+        \end{tabular}
+        \end{center}
+        Neither, because Small $\Rightarrow$ Light sometimes true and sometimes false.
+    \item (Small $\Rightarrow$ Light) $\Rightarrow$ ($\neg$  Small $\Rightarrow$ $\neg$ Light)
+    \begin{center}
+        \begin{tabular}{ |l|l|l|l|l|l|l|}
+          \hline
+          P = Small & $\neg$P &Q = Light &$\neg$Q &P $\Rightarrow$ Q &  $\neg$P $\Rightarrow$ $\neg$Q& (P $\Rightarrow$ Q) $\Rightarrow$ ($\neg$ P $\Rightarrow$ $\neg$ Q)  \\ \hline
+          T & F & T & F & T & T &T \\ \hline
+          T & F & F & T & F & T &T \\ \hline
+          F & T & T & F & T & F &F \\ \hline
+          F & T & F & T & T & T &T \\
+          \hline
+        \end{tabular}
+        \end{center}
+        Neither, because (Small $\Rightarrow$ Light) $\Rightarrow$ ($\neg$ Small $\Rightarrow$ $\neg$ Light) sometimes true and sometimes false.
+    \item Small $\vee$ Light $\vee$ $\neg$ Light
+    \begin{center}
+        \begin{tabular}{ |l|l|l|l|l|}
+          \hline
+          P = Small &  Q = Light &$\neg$Q &P $\vee$ Q &  P $\vee$ Q$\vee$ $\neg$Q\\ \hline
+          T & T & F & T & T\\ \hline
+          T & F & T & T & T\\ \hline
+          F & T & F & T & T\\ \hline
+          F & F & T & F & T\\
+          \hline
+        \end{tabular}
+        \end{center}
+        Valid, because Small $\vee$ Light $\vee$ $\neg$ Light always true.
+    \item ((Small $\wedge$ Dense)$\Rightarrow$ $\neg$ Light) $\Leftrightarrow$ ((Small $\Rightarrow$ Dense) $\vee$ ($\neg$ Light $\Rightarrow$ Dense))
+    \begin{center}
+        \begin{tabular}{ |l|l|l|l|l|l|l|l|l|}
+          \hline
+          P =  &  Q =   &R= & P$\wedge$Q & (P$\wedge$Q)  &  P $\Rightarrow$ Q&R $\Rightarrow$ Q&(P $\Rightarrow$ Q)$\wedge$&(P $\wedge$ Q) $\Rightarrow$ R) $\Leftrightarrow$ \\ 
+          Small&Dense&Light&&$\Rightarrow$ R& & &(R $\Rightarrow$ Q)&((P $\Rightarrow$ Q)$\wedge$(R $\Rightarrow$ Q))\\ \hline
+          T & T &T&T&T&T&T&T&T\\ \hline
+          T & T &F&T&F&T&T&T&F\\ \hline
+          T & F &T&F&T&F&F&F&F\\ \hline
+          T & F &F&F&T&F&T&T&T\\ \hline
+          F & T &T&F&T&T&T&T&T\\ \hline
+          F & T &F&F&T&T&F&T&T\\ \hline
+          F & F &T&F&T&T&F&T&T\\ \hline
+          F & F &F&F&T&T&T&T&T\\ \hline
+        \end{tabular}
+        \end{center}
+        Neither, because ((Small $\wedge$ Dense)$\Rightarrow$ $\neg$ Light) $\Leftrightarrow$ ((Small $\Rightarrow$ Dense) $\vee$ ($\neg$ Light $\Rightarrow$ Dense)) sometimes true and sometimes false.
+    \item (Small $\Rightarrow$ Dense) $\Rightarrow$ ((Small $\wedge$ Light) $\Rightarrow$ Dense)
+    \begin{center}
+      \begin{tabular}{ |l|l|l|l|l|l|l|}
+        \hline
+        P =  Small&  Q =  Dense &R= Light& P$\Rightarrow$Q & P$\wedge$R & (P$\wedge$R)$\Rightarrow$ Q&(P $\Rightarrow$ Q) $\Rightarrow$ ((P $\wedge$ R) $\Rightarrow$ Q)  \\ \hline
+        T & T &T&T&T&T&T\\ \hline
+        T & T &F&T&F&T&T\\ \hline
+        T & F &T&F&T&F&T\\ \hline
+        T & F &F&F&F&T&T\\ \hline
+        F & T &T&T&F&T&T\\ \hline
+        F & T &F&T&F&T&T\\ \hline
+        F & F &T&T&F&T&T\\ \hline
+        F & F &F&T&F&T&T\\ \hline
+      \end{tabular}
+      \end{center}
+      Valid, because (Small $\Rightarrow$ Dense) $\Rightarrow$ ((Small $\wedge$ Light) $\Rightarrow$ Dense) always true.
+    \item Small $\vee$ Cute $\vee$ (Small $\Rightarrow$ Cute)
+    \begin{center}
+      \begin{tabular}{ |l|l|l|l|l|}
+        \hline
+        P = Small  &  Q = Cute  & P$\Rightarrow$Q & P$\vee$Q & P$\vee$Q$\vee$(P $\Rightarrow$ Q) \\ \hline
+        T & T &T&T&T\\ \hline
+        T & F &F&T&T\\ \hline
+        F & T &T&T&T\\ \hline
+        F & F &T&F&T\\ \hline
+
+      \end{tabular}
+      \end{center}
+      Valid, because Small $\vee$ Cute $\vee$ (Small $\Rightarrow$ Cute) always true.
+    \item (Small $\wedge$ Cute) $\vee$ $\neg$ Cute
+    \begin{center}
+      \begin{tabular}{ |l|l|l|l|l|}
+        \hline
+        P =  Small &  Q = Cute & P$\wedge$Q & $\neg$ Q   &(P$\wedge$Q) $\vee$$\neg$ Q\\ \hline
+
+        T & T &T&F&T\\ \hline
+        T & F &F&T&T\\ \hline
+        F & T &F&F&F\\ \hline
+        F & F &F&T&T\\ \hline
+
+      \end{tabular}
+      \end{center}
+      Neither, because (Small $\wedge$ Cute) $\vee$ $\neg$ Cute sometimes true and sometimes false.
+    \item ((Snow $\Rightarrow$ Wet) $\wedge$ (Wet $\Rightarrow$ Cold)) $\Rightarrow$ (Snow $\Rightarrow$ Cold)
+    \begin{center}
+      \begin{tabular}{ |l|l|l|l|l|l|l|l|}
+        \hline
+        P =  &  Q =   &R= & P$\Rightarrow$Q & Q$\Rightarrow$R  &  P $\Rightarrow$R &(P$\Rightarrow$Q)$\wedge$(Q$\Rightarrow$R) &(P$\Rightarrow$Q)$\wedge$(Q$\Rightarrow$R) $\Rightarrow$ \\ 
+        Snow &Wet &Cold && & &&(P $\Rightarrow$R)\\ \hline
+        T & T &T&T&T&T&T&T\\ \hline
+        T & T &F&T&F&F&F&T\\ \hline
+        T & F &T&F&T&T&F&T\\ \hline
+        T & F &F&F&T&F&F&T\\ \hline
+        F & T &T&T&T&T&T&T\\ \hline
+        F & T &F&T&F&T&F&T\\ \hline
+        F & F &T&T&T&T&T&T\\ \hline
+        F & F &F&T&T&T&T&T\\ \hline
+      \end{tabular}
+      \end{center}
+      Valid, because ((Snow $\Rightarrow$ Wet) $\wedge$ (Wet $\Rightarrow$ Cold)) $\Rightarrow$ (Snow $\Rightarrow$ Cold) always true.
+    \item ((Snow $\vee$ Wet ) $\wedge$ ( $\neg$ Wet $\vee$ Cold)) $\Rightarrow$ ( Snow $\vee$ Cold )
+    \begin{center}
+      \begin{tabular}{ |l|l|l|l|l|l|l|l|l|}
+        \hline
+        P =  &  Q =   &R= & $\neg$Q & P$\vee$Q  &  P $\vee$R &$\neg$ Q $\vee$ R &(P$\vee$Q) $\wedge$ &((P$\vee$Q) $\wedge$ ($\neg$ Q $\vee$ R))$\Rightarrow$\\ 
+        Snow &Wet &Cold &&& & &($\neg$ Q $\vee$ R)&(P $\vee$R)\\ \hline
+        T & T &T&T&T&T&T&T&T\\ \hline
+        T & T &F&F&T&T&F&F&T\\ \hline
+        T & F &T&T&T&T&T&T&T\\ \hline
+        T & F &F&T&T&T&T&T&T\\ \hline
+        F & T &T&F&T&T&T&T&T\\ \hline
+        F & T &F&F&T&F&F&F&T\\ \hline
+        F & F &T&T&F&T&T&F&T\\ \hline
+        F & F &F&T&F&F&T&F&T\\ \hline
+      \end{tabular}
+      \end{center}
+      Valid, because ((Snow $\vee$ Wet ) $\wedge$ ( $\neg$ Wet $\vee$ Cold)) $\Rightarrow$ ( Snow $\vee$ Cold ) always true.
+\end{itemize}
+ 
+\section{Question2:}
+[15 points] For each of the following propositional calculus formulas, state briefly if it is a correct representation in propositional calculus of the sentence "If the dog sleeps and the house is warm, then the night is quiet." or not and explain why. The propositions used in the sentences should have an obvious interpretation.
+\begin{itemize}
+    \item If the dog sleeps and the house is warm, then the night is quiet $\equiv$ (DogSleeps $\wedge$ HouseWarm) $\Rightarrow$ NightQuiet
+    \item DogSleeps $\wedge$ HouseWarm $\wedge$ NightQuiet\newline
+    Incorrect. No equivalence to the sentence above.
+    \item (DogSleeps $\vee$ HouseWarm) $\Rightarrow$ NightQuiet\newline
+    Incorrect. Because according to the sentence above, Dog sleeps and house is warm may not happen at the same time, so it is different from the sentence above.
+    \item (DogSleeps $\wedge$ HouseWarm) $\Rightarrow$ NightQuiet\newline
+    Correct, it is the same logic expression as the sentence above. 
+    \item NightQuiet $\Rightarrow$ (DogSleeps $\wedge$ HouseWarm)\newline
+    Incorrect, it is opposite to the meaning of the sentence above
+    \item $\neg$ DogSleeps $\vee$ ($\neg$ NightQuiet $\vee$ HouseWarm)\newline
+    Incorrect. We have that ($\alpha$ $\Rightarrow$ $\beta$) $\equiv$ ($\neg$$\alpha$ $\vee$ $\beta$) from textbook.
+    So we can have 
+    
+    $\neg$ DogSleeps $\vee$ ($\neg$ NightQuiet $\vee$ HouseWarm) $\equiv$ 
+    
+    DogSleeps $\Rightarrow$ ( $\neg$NightQuiet $\vee$ HouseWarm ) $\equiv$ 
+    
+    DogSleeps $\Rightarrow$ (NightQuiet $\Rightarrow$ HouseWarm ).
+
+    That is different form the sentence above.
+    
+\end{itemize}
+
+\section{Question3:}
+[25 points] Convert the following set of propositional clauses to CNF
+\begin{itemize}
+    \item (Sunny $\Rightarrow$ Warm) $\Rightarrow$ Warm\newline
+    ($\neg$Sunny $\vee$ Warm)$\Rightarrow$ Warm  $\equiv$ Sunny $\wedge$ ($\neg$ Warm $\vee$Warm)
+
+    \item (Sunny $\Rightarrow$ Sunny) $\Rightarrow$ Rain\newline
+    (Sunny $\Rightarrow$ Sunny) $\Rightarrow$ Rain $\equiv$ Sunny $\wedge$($\neg$Sunny $\vee$ Rain)
+    \item (Rain $\Rightarrow$ Wet) $\Rightarrow$ $\neg$ (Wet $\Rightarrow$ Warm)\newline
+    (Rain $\Rightarrow$ Wet) $\Rightarrow$ $\neg$ (Wet $\Rightarrow$ Warm)$\equiv$ Rain $\wedge$ ($\neg$Wet $\vee$ Wet) $\wedge$ $\neg$Warm
+    \item and prove by resolution with refutation "Rain".\newline
+    we have Sunny, $\neg$Warm $\vee$ Warm, $\neg$Sunny $\vee$ Rain,Rain,$\neg$Wet $\vee$ Wet and $\neg$Warm.
+    And by refutaion, we can get $\neg$Rain. Finally we can prove by combining Rain and $\neg$Rain.
+\end{itemize}
+
+\section{Question4.4.3:}
+Conclusion: If alphabeta player play first, the win rate of alphabeta player is close to 99.5$\%$ , and the win rate for the random player is close to 0.5%.
+If random player play first, the win rate of alphabeta player is close to 80$\%$, but the win rate for the random playeris 0$\%$. There are something interesting,
+when random player play first, the rate of otherwise(draw) is close to 20$\%$, and random player is hard to win even once.
+We can conclusion that the first player has a big advantage in the whole game. The second player will take a very big disadvantage even with a stronger algorithm.
+
+\end{document}

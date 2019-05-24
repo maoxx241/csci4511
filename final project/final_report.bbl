@@ -1,0 +1,52 @@
+\begin{thebibliography}{1}
+
+\bibitem{brantingham1998mapping}
+Patricia~L Brantingham, Paul~J Brantingham, et~al.
+\newblock Mapping crime for analytic purposes: location quotients, counts, and
+  rates.
+\newblock {\em Crime mapping and crime prevention}, 8:263--288, 1998.
+
+\bibitem{chen2016events}
+Daniel~L Chen, Markus Loecher, Nora Barry, Laura Buchanan, and Evelina
+  Bakhturina.
+\newblock Events unrelated to crime predict criminal sentence length.
+\newblock Technical report, Technical report, 2016.
+
+\bibitem{iqbal2013experimental}
+Rizwan Iqbal, Masrah Azrifah~Azmi Murad, Aida Mustapha, Payam Hassany~Shariat
+  Panahy, and Nasim Khanahmadliravi.
+\newblock An experimental study of classification algorithms for crime
+  prediction.
+\newblock {\em Indian Journal of Science and Technology}, 6(3):4219--4225,
+  2013.
+
+\bibitem{liu2011comparison}
+Yuan~Y Liu, Min Yang, Malcolm Ramsay, Xiao~S Li, and Jeremy~W Coid.
+\newblock A comparison of logistic regression, classification and regression
+  tree, and neural networks models in predicting violent re-offending.
+\newblock {\em Journal of Quantitative Criminology}, 27(4):547--573, 2011.
+
+\bibitem{mcclendon2015using}
+Lawrence McClendon and Natarajan Meghanathan.
+\newblock Using machine learning algorithms to analyze crime data.
+\newblock {\em Machine Learning and Applications: An International Journal
+  (MLAIJ)}, 2(1):1--12, 2015.
+
+\bibitem{nasridinov2013decision}
+Aziz Nasridinov, Sun-Young Ihm, and Young-Ho Park.
+\newblock A decision tree-based classification model for crime prediction.
+\newblock In {\em Information Technology Convergence}, pages 531--538.
+  Springer, 2013.
+
+\bibitem{sathyadevan2014crime}
+Shiju Sathyadevan, Surya Gangadharan, et~al.
+\newblock Crime analysis and prediction using data mining.
+\newblock In {\em 2014 First International Conference on Networks \& Soft
+  Computing (ICNSC2014)}, pages 406--412. IEEE, 2014.
+
+\bibitem{Tan:2018:IDM:3208440}
+Pang-Ning Tan, Michael Steinbach, Anuj Karpatne, and Vipin Kumar.
+\newblock {\em Introduction to Data Mining (2Nd Edition)}.
+\newblock Pearson, 2nd edition, 2018.
+
+\end{thebibliography}

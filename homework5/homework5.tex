@@ -1,0 +1,60 @@
+\documentclass{article}
+
+\usepackage{graphicx}
+
+\begin{document}
+
+\title{Homework5}
+\author{Qi Mao\\
+  \texttt{maoxx241@umn.edu}}
+\maketitle
+
+\section{Question1:}
+[30 points] Consider the following variation to the block stacking domain; blocks are arranged on a table in $N^2$ locations corresponding to the cells of a N x N grid. At most one block can be located in any given location and no more than H blocks can be stacked.
+
+\begin{itemize}
+    \item Define action schemas for moving blocks between locations, between blocks, and between locations and blocks. Define the predicates you use and make sure the notation you use for writing the schemas is clearly defined.\newline
+    block: b1, b2\newline
+    location: l1, l2\newline
+    at(block,l1): block at location1\newline
+    on(block1,block2): block1 on block2\newline
+    Top(b): there is something on top\newline
+    form location to a other location:\newline
+    Action: move(b,l1,l2)\newline
+    precond: $\neg$Top(b) $\wedge$ $\neg$Top(l2) $\wedge$ on(b,l1) $\wedge$ block(b)\newline
+    effect: $\neg$On(b, l1) $\wedge$ On(b, l2) $\wedge$ $\neg$Clear(l2) $\wedge$ Clear(l1)\newline
+    form location and block:\newline
+    Action: Move (b1, b2, l1, l2)\newline
+    Precond: $\neg$Top(b1) $\wedge$ $\neg$Top(b2) $\wedge$ At(b1, l1) $\wedge$ At (b2, l2)\newline
+    Effect: On(b1, b2) $\wedge$ Top(b2) $\wedge$ At (b1, l2)\newline
+
+    \item Assume the initial state and goal state are completely specified (i.e. you know where each block is), and assume the number of blocks is less or equal to $N^2$.
+    \item Propose a trivial algorithm(not a planning algorithm) for solving any problem in this domain.\newline
+    A* searching algorithm
+    \item Is your algorithm guaranteed to find an optimal solution in terms of number of steps?\newline
+    A* can guaranteed to find find an optimal solution. and h(n)is admissible.
+    \item Discuss briefly the advantages, if any, of using a planning system compared to your solution.\newline
+    according to the book" one of the ncie advantages of the declarative representation of action schemas is that we can also search backward from the goal, looking for the initial state." this is we can't do with trivial algorithm
+    
+\end{itemize}
+
+\section{Question2:}
+[20 points]
+\begin{itemize}
+    \item How does the ``closed world assumption'' affect planning? Be precise.\newline
+    we can consider the unknow situations as false then the planning process can be easier.
+    \item Why preconditions in action schemas are conjunctions and not disjunctions? \newline
+    conjunctions means all the states are necessary to be true at the same time.
+    disjunctions means they do not necessary to be true and the same time. 
+    we must make sure that all the things that necessary are list there.
+    \item Why variables that appear in the effects of an action schema have to be in the preconditions?\newline
+    Because, in an action schema, after the action, there are some changes happened. If the variable in the effect is not displayed in the precondition, then it is something from the unknown, which should not happen. Therefore, the variables that appear in the action schema effect must be in the preconditions.
+    \item Why an initial state for planning needs to have ground atoms (no variables)?\newline
+    For initial state, all ground atoms are known, so they are treated as true. But for variables, they are unknow. They should be false. 
+    
+    
+
+\end{itemize}
+
+
+\end{document}
